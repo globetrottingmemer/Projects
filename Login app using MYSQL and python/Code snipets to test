@@ -1,0 +1,16 @@
+ADDING VALUE CODE
+mycursor.execute("""
+           INSERT INTO users (id,name,email,password)
+           VALUES ('NULL','Ani', 'ani@gmail.com', '122345');
+            """)
+conn.commit()
+
+
+DATA RETRIVAL
+
+mycursor.execute("""
+SELECT * From users WHERE email LIKE 'ani@gmail.com' AND password LIKE '122345'
+""")
+data = mycursor.fetchall()
+conn.commit()
+print(data)
